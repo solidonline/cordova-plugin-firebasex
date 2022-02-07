@@ -139,7 +139,7 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
             if (remoteMessage.getNotification() != null) {
                 // Notification message payload
                 Log.i(TAG, "Received message: notification");
-                Log.d(TAG, "!DATA  "+ remoteMessage.getNotification().toString());
+                Log.d(TAG, "!Notification  "+ remoteMessage.getNotification().toString());
                 messageType = "notification";
                 id = remoteMessage.getMessageId();
                 RemoteMessage.Notification notification = remoteMessage.getNotification();
