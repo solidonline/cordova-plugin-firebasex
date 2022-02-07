@@ -143,7 +143,7 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
                 RemoteMessage.Notification notification = remoteMessage.getNotification();
                 title = notification.getTitle();
 
-                if (!title) {
+                if (title == null) {
                      title = "Солидарность";
                 }
 
