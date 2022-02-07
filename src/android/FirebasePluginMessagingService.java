@@ -134,10 +134,12 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
             boolean foregroundNotification = true;
 
             Map<String, String> data = remoteMessage.getData();
+            Log.d(TAG, "!DATA  "+ data.toString());
 
             if (remoteMessage.getNotification() != null) {
                 // Notification message payload
                 Log.i(TAG, "Received message: notification");
+                Log.d(TAG, "!DATA  "+ remoteMessage.getNotification().toString());
                 messageType = "notification";
                 id = remoteMessage.getMessageId();
                 RemoteMessage.Notification notification = remoteMessage.getNotification();
