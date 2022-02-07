@@ -12,9 +12,9 @@
 		<engine name="cordova-ios" version=">=5" />
 	</engines>
 
-	<preference name="FIREBASE_ANALYTICS_COLLECTION_ENABLED" default="true" />
-	<preference name="FIREBASE_PERFORMANCE_COLLECTION_ENABLED" default="true" />
-	<preference name="FIREBASE_CRASHLYTICS_COLLECTION_ENABLED" default="true" />
+	<preference name="FIREBASE_ANALYTICS_COLLECTION_ENABLED" default="false" />
+	<preference name="FIREBASE_PERFORMANCE_COLLECTION_ENABLED" default="false" />
+	<preference name="FIREBASE_CRASHLYTICS_COLLECTION_ENABLED" default="false" />
 
 	<platform name="android">
 		<preference name="ANDROID_ICON_ACCENT" default="#FF00FFFF" />
