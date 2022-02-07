@@ -17,7 +17,7 @@
 	<preference name="FIREBASE_CRASHLYTICS_COLLECTION_ENABLED" default="false" />
 
 	<platform name="android">
-		<preference name="ANDROID_ICON_ACCENT" default="#FF00FFFF" />
+		<preference name="ANDROID_ICON_ACCENT" default="#D70031FF" />
 		<preference name="ANDROID_FIREBASE_PERFORMANCE_MONITORING" default="false" />
 
 		<js-module name="FirebasePlugin" src="www/firebase.js">
@@ -42,6 +42,7 @@
 				</intent-filter>
 			</service>
 			<receiver android:name="org.apache.cordova.firebase.OnNotificationOpenReceiver"/>
+			<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/accent" />
 			<meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="@string/default_notification_channel_id"/>
 			<meta-data android:name="firebase_analytics_collection_enabled" android:value="$FIREBASE_ANALYTICS_COLLECTION_ENABLED" />
 			<meta-data android:name="firebase_performance_collection_enabled" android:value="$FIREBASE_PERFORMANCE_COLLECTION_ENABLED" />
