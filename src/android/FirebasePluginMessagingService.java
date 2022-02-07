@@ -131,7 +131,7 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
             String priority = null;
             String image = null;
             String imageType = null;
-            boolean foregroundNotification = false;
+            boolean foregroundNotification = true;
 
             Map<String, String> data = remoteMessage.getData();
 
