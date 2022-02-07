@@ -141,7 +141,12 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
                 messageType = "notification";
                 id = remoteMessage.getMessageId();
                 RemoteMessage.Notification notification = remoteMessage.getNotification();
-                title = notification.getTitle() || "Солидарность";
+                title = notification.getTitle();
+
+                if (!title) {
+                     title = "Солидарность";
+                }
+
                 body = notification.getBody();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     channelId = notification.getChannelId();
