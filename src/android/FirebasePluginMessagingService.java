@@ -129,7 +129,7 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
             String channelId = null;
             String visibility = null;
             String priority = null;
-            String image = null;
+            String image = "";
             String imageType = null;
             boolean foregroundNotification = true;
 
@@ -149,7 +149,9 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
                 sound = notification.getSound();
                 color = notification.getColor();
                 icon = notification.getIcon();
-                image = notification.getImageUrl().toString();
+                if (notification.getImageUrl() != null) {
+                    image = notification.getImageUrl().toString();
+                }
             }else{
                 Log.i(TAG, "Received message: data");
                 messageType = "data";
